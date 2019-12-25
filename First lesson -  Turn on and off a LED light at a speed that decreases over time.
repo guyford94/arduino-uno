@@ -1,0 +1,32 @@
+/*
+  Blink
+
+ Turn on and off a LED light at a speed that decreases over time.
+
+Created by Guy Ford.
+Dated 22.12.19.
+First lesson in Arduino Uno
+
+
+*/
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(13, OUTPUT);
+  
+}
+
+// the loop function runs over and over again forever
+void loop(){
+int i ;
+  for(i=1000; i >0 ; i= i+100){
+   
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(i);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(i);                       // wait for a second
+
+ 
+  }
+}
